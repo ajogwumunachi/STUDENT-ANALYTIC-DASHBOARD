@@ -1,0 +1,81 @@
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+    <script defer src="STUDENT.JS"></script>
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            text-align: center;
+        }
+        
+        h2 {
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 8px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        canvas {
+            background-color: white;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Student Performance Dashboard</h2>
+
+<div class="container">
+
+    <input id="name" placeholder="Enter Name">
+
+    <input id="score" type="number" placeholder="Enter Score (0 - 100)" min="0" max="100">
+
+    <button onclick="addstudent()">Add Student</button>
+
+    <p id="output"></p>
+
+    <p id="summary">Students: 0 | Average Score: 0</p>
+
+</div>
+
+<canvas id="myChart"></canvas>
+
+</body>
+</html>
